@@ -2,6 +2,9 @@
 
 return [
 
+    'password_grant' => 'contact-list-password',
+    'personal_access' => 'personal-access', 
+
     /*
     |--------------------------------------------------------------------------
     | Authentication Defaults
@@ -38,6 +41,11 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
+            'provider' => 'users',
+        ],
+
+        'api' => [
+            'driver' => 'passport',
             'provider' => 'users',
         ],
     ],
